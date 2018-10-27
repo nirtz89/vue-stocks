@@ -1,17 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div id="app">
+      <span>{{savedStocks}}</span>
+      <Searchbox :savedStocks="savedStocks"/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Searchbox from './components/Searchbox.vue'
+import Searchvalue from './components/Searchvalue.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Searchbox,
+    Searchvalue
+  },
+  data: function() {
+    return {
+      savedStocks: ["nir"]
+    }
   }
 }
 </script>
