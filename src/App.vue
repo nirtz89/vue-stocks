@@ -1,25 +1,38 @@
 <template>
   <div class="container">
-    <div id="app">
-      <span>{{savedStocks}}</span>
-      <Searchbox :savedStocks="savedStocks"/>
-    </div>
+    <div class="row">
+        <div class="col-12">
+          <div id="app">
+            <div class="row">
+              <div class="col-6">
+              <span>{{savedStocks}}</span>
+              <Searchbox :savedStocks="savedStocks"/>
+              </div>
+              <div class="col-6">
+                <Stocksbox />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </template>
 
 <script>
 import Searchbox from './components/Searchbox.vue'
 import Searchvalue from './components/Searchvalue.vue'
+import Stocksbox from './components/Stocksbox.vue'
 
 export default {
   name: 'app',
   components: {
     Searchbox,
-    Searchvalue
+    Searchvalue,
+    Stocksbox
   },
   data: function() {
     return {
-      savedStocks: ["nir"]
+      savedStocks: []
     }
   }
 }

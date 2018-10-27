@@ -12,7 +12,7 @@ export default {
   },
   methods: {
       saveStock: function (stock) {
-          this.savedStocks.push("Reut");
+          this.savedStocks.push(stock);
       }
   }
 }

@@ -18,7 +18,6 @@ export default {
   props: ['savedStocks'],
   data: function() {
     return {
-      test: "1234",
       searchinput: "",
       t: null,
       spantext: "",
