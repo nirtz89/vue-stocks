@@ -5,11 +5,10 @@
           <div id="app">
             <div class="row">
               <div class="col-6">
-              <span>{{savedStocks}}</span>
               <Searchbox :savedStocks="savedStocks"/>
               </div>
               <div class="col-6">
-                <Stocksbox />
+                <Stocksbox :savedStocks="savedStocks" />
               </div>
             </div>
           </div>

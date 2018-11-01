@@ -1,5 +1,5 @@
 <template>
-    <li v-on:click="saveStock(stock)">{{ stock.symbol }} ( {{stock.name}} )</li>
+    <li v-on:click="saveStock(stock)">{{ stock.symbol }} ({{stock.name}})</li>
 </template>
 
 <script>
@@ -12,6 +12,7 @@ export default {
   },
   methods: {
       saveStock: function (stock) {
+          stock.value = "Waiting for update";
           this.savedStocks.push(stock);
       }
   }
